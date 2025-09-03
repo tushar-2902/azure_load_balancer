@@ -1,0 +1,15 @@
+resource "azurerm_network_security_group" "nsg" {
+  name                = var.nsg-name
+  location            = var.location
+  resource_group_name = var.rg-name
+}
+
+resource "azurerm_virtual_network" "vnet" {
+  name                = var.vnet-name
+  location            = var.location
+  resource_group_name = var.rg-name
+  address_space       = ["10.0.0.0/16"]
+  dns_servers         = ["10.0.0.4", "10.0.0.5"]
+
+}
+
