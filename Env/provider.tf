@@ -1,11 +1,11 @@
-#terraform {
- # backend "azurerm" {
-  #  resource_group_name   = "tushar-state-rg"
-   # storage_account_name  = "tusharstorage420"
-    #container_name        = "tfstate"
-    #key                   = "terraform.tfstate"
-  #}
-#}
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "tushar-state-rg"
+    storage_account_name  = "tusharstorage4201"
+    container_name        = "tfstate"
+    key                   = "terraform.tfstate"
+  }
+}
 
 terraform {
   required_providers {
